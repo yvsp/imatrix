@@ -7,8 +7,7 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div class="form">
-<p>This is another secured page.</p>
+p>
 <p><a href="index.php">Home</a></p>
 <a href="logout.php">Logout</a>
 </div>

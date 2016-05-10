@@ -7,7 +7,7 @@
 <html>
 <div class="auto-style2"> <br><br>
 	<head>
-		
+		<title>Generic - Spatial by TEMPLATED</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -52,12 +52,12 @@
 
       $connector = @mysql_connect($host,$username,$password)
           or die("Unable to connect");
-        echo "list of consultants";
+        echo "list of recruiters";
       $selected = mysql_select_db("company", $connector)
         or die("Unable to connect");
 
       //execute the SQL query and return records
-      $result = mysql_query("SELECT * FROM consultant; ");
+      $result = mysql_query("SELECT * FROM recruiter; ");
       ?>
       <table>
       <thead>
@@ -89,13 +89,10 @@
     
     
     
-    <p><a href="adminnew.php">Add a new record</a></p>
-
-    
-    
-    
-    	<!-- Footer -->
-			<footer id="footer">
+    <p><a href="recruiternew.php">Add a new record</a>
+      	<!-- Footer -->
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="recruiterdelete.php">Delete a Record</a><footer id="footer">
 				<div class="container">
 					<ul class="icons">
 						<li><a href="#" class="icon fa-facebook"></a></li>

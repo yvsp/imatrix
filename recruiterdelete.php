@@ -6,6 +6,9 @@
  
  // creates the new record form
  // since this form is used multiple times in this file, I have made it a function that is easily reusable
+ function renderForm($name, $password, $email, $contact, $address, $error)
+{
+}
  ?>
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
  <html>
