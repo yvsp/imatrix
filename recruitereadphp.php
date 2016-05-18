@@ -7,7 +7,7 @@
 <html>
 <div class="auto-style2"> <br><br>
 	<head>
-		<title>Generic - Spatial by TEMPLATED</title>
+		
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -52,34 +52,38 @@
 
       $connector = @mysql_connect($host,$username,$password)
           or die("Unable to connect");
-        echo "list of recruiters";
+        echo "list of consultants";
       $selected = mysql_select_db("company", $connector)
         or die("Unable to connect");
 
       //execute the SQL query and return records
-      $result = mysql_query("SELECT * FROM recruiter; ");
+      $result = mysql_query("SELECT * FROM consultant; ");
       ?>
       <table>
       <thead>
         <tr align="center">
-          <td><b>_id</b></td>
+          
           <td><b>_name</b></td>
           <td><b>_email</b></td>
           <td><b>_contact</b></td>
           <td><b>address</b></td>
-         
+         <td align="center" color="red"><strong><em>delete</em></strong></td>
+
         </tr>
       </thead>    
       <tbody>
         <?php
           while( $row = mysql_fetch_assoc( $result)){
-            echo
+$link="recruiterdelete.php?id=".$row['id'];
+           
+ echo
             "<tr>
-              <td align='center'>{$row['id']}</td>
+              
               <td align='center'>{$row['username']}</td>
               <td align='center'>{$row['email']}</td>
               <td align='center'>{$row['contact']}</td>
               <td align='center'>{$row['address']}</td>
+              <td align='center'><a href=$link>delete</a></td>
               
             </tr>\n";
           }
@@ -89,10 +93,13 @@
     
     
     
-    <p><a href="recruiternew.php">Add a new record</a>
-      	<!-- Footer -->
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="recruiterdelete.php">Delete a Record</a><footer id="footer">
+    <p><a href="adminnew.php">Add a new record</a></p>
+
+    
+    
+    
+    	<!-- Footer -->
+			<footer id="footer">
 				<div class="container">
 					<ul class="icons">
 						<li><a href="#" class="icon fa-facebook"></a></li>

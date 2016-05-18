@@ -62,25 +62,29 @@
       <table> 
       <thead>
         <tr align="center">
-          <td><b>_id</b></td>
+          
           <td><b>_name</b></td>
           <td><b>_email</b></td>
           <td><b>_contact</b></td>
           <td><b>address</b></td>
+          <td align="center" color="red">delete</td>
          
         </tr>
       </thead>    
       <tbody>
         <?php
           while( $row = mysql_fetch_assoc( $result)){
+           $link="recruiterdelete.php?id=".$row['id'];
+
             echo
             "<tr>
-              <td align='center'>{$row['id']}</td>
+              
               <td align='center'>{$row['username']}</td>
               <td align='center'>{$row['email']}</td>
               <td align='center'>{$row['contact']}</td>
               <td align='center'>{$row['address']}</td>
-              
+              <td align='center'><a href=$link>delete</a></td>
+
             </tr>\n";
           }
         ?>

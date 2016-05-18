@@ -58,10 +58,10 @@ header("location: recruiterprofile.php");
 		</div>
 		<br>
 		
-<form action="" method="post">
+<form action="" method="post" align="center">
     
     <div class="auto-style1">
-				<table style="width: 20%; height: 185px" align="center">
+				<table style="width: 20%; height: 185px" >
 					<tr>
 						<td align="center">
 				<label>UserName :</label> <input id="name" name="username" placeholder="username" type="text"style="width: 245px"></td>
